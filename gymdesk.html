@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gymdesk Widget</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gymdesk Widget Test</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
+    body, html {
+      margin: 0; padding: 0; height: 100%;
       width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-    }
-    .widget-container {
-      width: 100%;
-      max-width: 100%;
-      min-height: 100vh;
       box-sizing: border-box;
     }
     .gymdesk-booking {
-      width: 100% !important;
-      max-width: 100% !important;
+      width: 100%;
+      max-width: 600px; /* Max-Breite für Desktop */
+      height: 700px; /* Höhe anpassen, je nach Widget */
+      margin: 0 auto; /* Zentriert */
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+    @media (max-width: 480px) {
+      .gymdesk-booking {
+        max-width: 100%;
+        height: 600px; /* weniger Höhe für mobile */
+      }
     }
   </style>
 </head>
 <body>
-  <div class="widget-container">
-    <script src="https://gymdesk.com/js/widgets.js"></script>
-    <div 
-      class="gymdesk-booking" 
-      attr-gym="lYJXx" 
-      attr-schedule="all" 
-      attr-form="AwvwE">
-    </div>
+  <script src="https://gymdesk.com/js/widgets.js"></script>
+  <div 
+    class="gymdesk-booking" 
+    attr-gym="lYJXx" 
+    attr-schedule="all" 
+    attr-form="AwvwE">
   </div>
 </body>
 </html>
-
